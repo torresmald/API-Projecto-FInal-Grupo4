@@ -8,7 +8,7 @@
     "email": "test@test.com",
     "date": "17/02/2022",
     "areas": ["Gym", "Maths", "Language"],
-    "tutor": "6411aae2ba2188502d004b29",
+    "tutor": "6411ac5df77f3d475fc89a99",
     "diseases": "Asma",
     "nutrition": ["Platano", "Fresa"],
     "grade": "1ºA"
@@ -186,7 +186,7 @@
     "id": "14",
     "name": "Juan Topo",
     "image": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1671486615/WhatsApp_Image_2022-12-19_at_22.49.24_s7eoxt.jpg",
-    "phone": "69i876543",
+    "phone": "691876543",
     "address": "Calle Alvaro 22",
     "email": "juan@test.com",
     "date": "17/02/2022",
