@@ -1,10 +1,10 @@
-# API CON COLECCIÓN DE JUEGOS DE MESA
+# API COLEGIO
 
-![Image Movies](https://i.blogs.es/2b20e0/mariokart/1366_2000.jpeg)
 
- **Proyecto de Base de Datos de Juegos de Mesa*     
 
-Práctica/Proyecto de Back-end que consiste en la creación de una base de datos de una api de juegos de mesa, realizada con Node.js y MongoAtlas.
+ **Proyecto de Base de Datos de Colegio*     
+
+Práctica/Proyecto de Back-end que consiste en la creación de una base de datos de una api de Colegio, realizada con Node.js y MongoAtlas.
 
 ## HECHO CON
 

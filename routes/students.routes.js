@@ -8,7 +8,7 @@ const isAuth = require ('../utils/middlewares/auth.middleware.js')
 
 studentsRouter.get('/', async (request, response, next) => {
     try {
-        const allStudents = await Student.find();
+        const allStudents = await Student.find().populate('tutor');
         return response.status(200).json(allStudents);
     } catch (error) {
         next(error)

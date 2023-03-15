@@ -1,24 +1,24 @@
 const express = require('express');
 const passport = require('passport');
-const Parent = require('../model/Parents');
-const parentRouter = express.Router();
+const Teacher = require('../model/Teachers');
+const teacherRouter = express.Router();
 const createError = require('../utils/errors/createError.js');
 const bcrypt = require('bcrypt');
 const getJWT = require('../utils/authentication/jsonwebtoken');
 const isAuth = require('../utils/middlewares/auth.middleware.js');
 
-parentRouter.get('/', async (request, response, next) => {
+teacherRouter.get('/', async (request, response, next) => {
     try {
-        const allParents = await Parent.find().populate('childs');
-        if (allParents.length === 0) {
+        const allTeachers = await Teacher.find();
+        if (allTeachers.length === 0) {
             return response.status(200).json('No hay usuarios registrados');
         }
-        return response.status(200).json(allParents)
+        return response.status(200).json(allTeachers)
     } catch (error) {
         return next(error)
     }
 })
-parentRouter.post('/register', async (request, response, next) => {
+teacherRouter.post('/register', async (request, response, next) => {
     const done = (error, user) => {
         if (error) {
             return next(error);
@@ -36,9 +36,9 @@ parentRouter.post('/register', async (request, response, next) => {
     passport.authenticate('register', done)(request);
 });
 
-parentRouter.post('/login', async (request, response, next) => {
+teacherRouter.post('/login', async (request, response, next) => {
     const { email, password } = request.body;
-    const user = await Parent.findOne({ email });
+    const user = await Teacher.findOne({ email });
     if (!user) {
         return next(createError('El usuario no existe'), 404);
     }
@@ -54,4 +54,4 @@ parentRouter.post('/login', async (request, response, next) => {
     });
 });
 
-module.exports = parentRouter;
+module.exports = teacherRouter;

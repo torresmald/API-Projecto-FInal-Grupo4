@@ -8,7 +8,9 @@ const PORT = process.env.PORT || 3000;
 const DB_URL = process.env.DB_URL;
 const server = express();
 const studentsRouter = require('./routes/students.routes.js');
-const userRouter = require('./routes/user.routes.js');
+const parentsRouter = require('./routes/parents.routes.js');
+const teachersRouter = require('./routes/teachers.routes');
+const notificationsRouter = require('./routes/notifications.routes.js');
 const connect = require('./utils/db/connect.js');
 const path = require('path');
 const cloudinary = require('cloudinary');
@@ -51,8 +53,11 @@ server.get('/', (request, response) => {
   response.status(200).json('Bienvenido a mi API de BoardGames.')
 })
 
-server.use('/users', userRouter);
+server.use('/parents', parentsRouter);
 server.use('/students', studentsRouter);
+server.use('/teachers', teachersRouter);
+server.use('/notifications', notificationsRouter);
+
 server.use('*', (request, response, next) => {
   next(createError(`Esta ruta no existe`, 404))
 });

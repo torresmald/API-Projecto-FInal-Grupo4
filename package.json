@@ -8,7 +8,9 @@
     "start": "node index.js",
     "start:live": "nodemon index.js",
     "seedStudents": "node './utils/seed/db/seedStudents.js'",
-    "seedParents": "node './utils/seed/db/seedParents.js'"
+    "seedParents": "node './utils/seed/db/seedParents.js'",
+    "seedTeachers": "node './utils/seed/db/seedTeachers.js'",
+    "seedNotifications": "node './utils/seed/db/seedNotifications.js'"
   },
   "keywords": [],
   "author": "",
