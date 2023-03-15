@@ -7,10 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "start:live": "nodemon index.js",
-    "seedGames": "node './utils/seed/db/seedGames.js'",
-    "seedMyGames": "node './utils/seed/db/seedMyGames.js'",
-    "seedUsers": "node './utils/seed/db/seedUsers.js'",
-    "seedCategories": "node './utils/seed/db/seedCategories.js'"
+    "seedStudents": "node './utils/seed/db/seedStudents.js'",
+    "seedParents": "node './utils/seed/db/seedParents.js'"
   },
   "keywords": [],
   "author": "",

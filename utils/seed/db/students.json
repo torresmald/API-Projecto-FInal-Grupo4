@@ -1,0 +1,16 @@
+[
+  {
+    "id": "1",
+    "name": "Pepito Perez",
+    "image": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1671486615/WhatsApp_Image_2022-12-19_at_22.49.24_s7eoxt.jpg",
+    "phone": "63333333",
+    "address": "Avendida Los Angeles 33",
+    "email": "test@test.com",
+    "date": "17/02/2022",
+    "areas": ["Gym", "Maths", "Language"],
+    "tutor": "Paco Perez",
+    "diseases": "Asma",
+    "nutrition": ["Platano", "Fresa"],
+    "grade": "1ºA"
+  }
+]
