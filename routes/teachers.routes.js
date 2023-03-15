@@ -1,5 +1,5 @@
 const express = require('express');
-const passport = require('passport');
+const passport2 = require('passport');
 const Teacher = require('../model/Teachers');
 const teacherRouter = express.Router();
 const createError = require('../utils/errors/createError.js');
@@ -33,7 +33,7 @@ teacherRouter.post('/register', async (request, response, next) => {
             }
         )
     }
-    passport.authenticate('register', done)(request);
+    passport2.authenticate('registerTeacher', done)(request);
 });
 
 teacherRouter.post('/login', async (request, response, next) => {

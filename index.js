@@ -44,7 +44,6 @@ server.use(session({
 
 server.use(passport.initialize());
 server.use(passport.session());
-
 server.use(express.json());
 server.use(express.urlencoded({ extended: false }));
 server.use(express.static(path.join(__dirname, '/tmp/')));

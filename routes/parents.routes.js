@@ -33,7 +33,7 @@ parentRouter.post('/register', async (request, response, next) => {
             }
         )
     }
-    passport.authenticate('register', done)(request);
+    passport.authenticate('registerParent', done)(request);
 });
 
 parentRouter.post('/login', async (request, response, next) => {
