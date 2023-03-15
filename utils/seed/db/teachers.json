@@ -1,10 +1,28 @@
 [
   {
-    "email": "test@test.com",
+    "email": "alfa@test.com",
     "password": "12345678",
-    "name": "Pepito Perez",
+    "name": "Pedro Jimenez",
     "phone": "65213675",
-    "idCard": "7025652W",
+    "idCard": "7025653W",
     "grade": "1ªA"
+  },
+
+  {
+    "email": "beta@test.com",
+    "password": "12345678",
+    "name": "Isabel Ramirez",
+    "phone": "65213675",
+    "idCard": "7025654W",
+    "grade": "1ªA"
+  },
+
+  {
+    "email": "celta@test.com",
+    "password": "12345678",
+    "name": "Maria Gonzalez",
+    "phone": "65213675",
+    "idCard": "7025655W",
+    "grade": "2ªA"
   }
 ]
