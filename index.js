@@ -49,7 +49,7 @@ server.use(express.urlencoded({ extended: false }));
 server.use(express.static(path.join(__dirname, '/tmp/')));
 
 server.get('/', (request, response) => {
-  response.status(200).json('Bienvenido a mi API de BoardGames.')
+  response.status(200).json('Bienvenido a la API del colegio SEMILLA.')
 })
 
 server.use('/parents', parentsRouter);
