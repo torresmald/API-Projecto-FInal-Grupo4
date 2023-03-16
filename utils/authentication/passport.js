@@ -23,7 +23,8 @@ passport.use(
                 const encryptedPassword = await bcrypt.hash(password.toString(), parseInt(10));
                 const newUser = new Parent({
                     email,
-                    password: encryptedPassword
+                    password: encryptedPassword,
+                    childs: request.body.childs
                 });
                 const savedUser = await newUser.save();
                 return done(null, savedUser)
@@ -50,7 +51,11 @@ passport.use(
                 const encryptedPassword = await bcrypt.hash(password.toString(), parseInt(10));
                 const newUser = new Teacher({
                     email,
-                    password: encryptedPassword
+                    password: encryptedPassword,
+                    name: request.body.name,
+                    phone: request.body.phone,
+                    idCard: request.body.idCard,
+                    grade: request.body.grade
                 });
                 const savedUser = await newUser.save();
                 return done(null, savedUser)
