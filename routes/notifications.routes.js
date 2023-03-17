@@ -24,7 +24,7 @@ notificationRouter.get('/:id', async (request, response, next) => {
         next(error)
     }
 });
-notificationRouter.post('/', [upload.single('picture'), uploadToCloud, isAuth], async (request, response, next) => {
+notificationRouter.post('/', [upload.single('picture'), uploadToCloud], async (request, response, next) => {
     try {
         const allNotifications = await Notification.find();
         let maxId = 0;
