@@ -38,7 +38,7 @@ parentRouter.post('/register', async (request, response, next) => {
 
 parentRouter.post('/login', async (request, response, next) => {
     const { email, password } = request.body;
-    const user = await Parent.findOne({ email });
+    const user = await Parent.findOne({ email }).populate('childs');
     if (!user) {
         return next(createError('El usuario no existe'), 404);
     }
