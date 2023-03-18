@@ -5,7 +5,7 @@ const notificationsSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    date: { type: Date, required: true },
+    date: { type: String, required: true },
     description: String,
     student: [{ type: mongoose.Types.ObjectId, ref: 'Student' }]
 },
