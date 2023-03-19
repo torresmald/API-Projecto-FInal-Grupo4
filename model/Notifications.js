@@ -7,6 +7,7 @@ const notificationsSchema = new mongoose.Schema({
     },
     date: { type: String, required: true },
     description: String,
+    readed: Boolean,
     calendar: String,
     student: [{ type: mongoose.Types.ObjectId, ref: 'Student' }]
 },

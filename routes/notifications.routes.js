@@ -61,7 +61,7 @@ notificationRouter.put('/:id', [isAuth] ,async (request, response, next) => {
         next(error)
     }
 });
-notificationRouter.delete('/:id', [isAuth] ,async (request, response, next) => {
+notificationRouter.delete('/:id' ,async (request, response, next) => {
     try {
         const id = request.params.id;
         const deletedNotification = await Notification.findByIdAndDelete(id);
