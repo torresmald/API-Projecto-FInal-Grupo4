@@ -43,7 +43,7 @@ notificationRouter.post('/', [upload.single('calendar'), uploadToCloud], async (
     }
 });
 
-notificationRouter.put('/:id', [isAuth] ,async (request, response, next) => {
+notificationRouter.put('/:id', async (request, response, next) => {
     try {
         const id = request.params.id;
         const modifiedNotification = new Notification({ ...request.body});
