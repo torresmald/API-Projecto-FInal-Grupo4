@@ -26,7 +26,7 @@ notificationRouter.get('/:id', async (request, response, next) => {
 });
 notificationRouter.post('/', [upload.single('calendar'), uploadToCloud], async (request, response, next) => {
     try {
-        const calendar=request.file?request.file.filename:null;
+        const calendar = request.file? request.file.filename :null;
         const allNotifications = await Notification.find();
         let maxId = 0;
         allNotifications.forEach((boardNotification) => {
@@ -35,7 +35,7 @@ notificationRouter.post('/', [upload.single('calendar'), uploadToCloud], async (
                 maxId = id + 1;
             }
         });
-        const newNotification = new Notification({ ...request.body, id: maxId, calendar });
+        const newNotification = new Notification({ ...request.body, id: maxId, calendar: request.file_url });
         const newNotificationDoc = await newNotification.save();
         return response.status(201).json(newNotificationDoc);
     } catch (error) {
