@@ -10,6 +10,7 @@
     "seedStudents": "node './utils/seed/db/seedStudents.js'",
     "seedParents": "node './utils/seed/db/seedParents.js'",
     "seedTeachers": "node './utils/seed/db/seedTeachers.js'",
+    "seedResources": "node './utils/seed/db/seedResources.js'",
     "seedNotifications": "node './utils/seed/db/seedNotifications.js'"
   },
   "keywords": [],

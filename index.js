@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 3000;
 const DB_URL = process.env.DB_URL;
 const server = express();
 const studentsRouter = require('./routes/students.routes.js');
+const resourcesRouter = require('./routes/resources.routes');
 const parentsRouter = require('./routes/parents.routes.js');
 const teachersRouter = require('./routes/teachers.routes');
 const notificationsRouter = require('./routes/notifications.routes.js');
@@ -54,6 +55,7 @@ server.get('/', (request, response) => {
 
 server.use('/parents', parentsRouter);
 server.use('/students', studentsRouter);
+server.use('/resources', resourcesRouter);
 server.use('/teachers', teachersRouter);
 server.use('/notifications', notificationsRouter);
 
