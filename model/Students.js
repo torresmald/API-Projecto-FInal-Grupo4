@@ -13,7 +13,6 @@ const studentsSchema = new mongoose.Schema({
     diseases: { type: [String] },
     nutrition: { type: [String] },
     grade: String,
-
 },
     {
         timestamps: true
