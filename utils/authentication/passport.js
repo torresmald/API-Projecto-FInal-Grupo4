@@ -55,7 +55,8 @@ passport.use(
                     name: request.body.name,
                     phone: request.body.phone,
                     idCard: request.body.idCard,
-                    grade: request.body.grade
+                    grade: request.body.grade,
+                    admin: request.body.admin
                 });
                 const savedUser = await newUser.save();
                 return done(null, savedUser)
