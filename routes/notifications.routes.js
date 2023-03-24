@@ -24,9 +24,14 @@ notificationRouter.get('/:id', async (request, response, next) => {
         next(error)
     }
 });
-notificationRouter.post('/', [upload.single('image'), uploadToCloud], async (request, response, next) => {
+notificationRouter.post('/', [upload.fields([
+    { name: 'image', maxCount: 1 },
+    { name: 'calendar', maxCount: 1 }
+  ]),  uploadToCloud], async (request, response, next) => {
     try {
-        const image = request.file? request.file.filename :null;
+        const image = request.files['image'][0] ? request.files['image'][0].filename : null;
+        const calendar = request.files['calendar'][0] ? request.files['calendar'][0].filename : null;
+
         const allNotifications = await Notification.find();
         let maxId = 0;
         allNotifications.forEach((boardNotification) => {
@@ -35,7 +40,7 @@ notificationRouter.post('/', [upload.single('image'), uploadToCloud], async (req
                 maxId = id + 1;
             }
         });
-        const newNotification = new Notification({ ...request.body, id: maxId, image: request.file_url });
+        const newNotification = new Notification({ ...request.body, id: maxId, image: image, calendar: calendar});
         const newNotificationDoc = await newNotification.save();
         return response.status(201).json(newNotificationDoc);
     } catch (error) {
