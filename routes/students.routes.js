@@ -69,7 +69,7 @@ studentsRouter.post('/', [upload.single('picture'), uploadToCloud], async (reque
     }
 });
 
-studentsRouter.put('/:id', [isAuth] ,async (request, response, next) => {
+studentsRouter.put('/:id' ,async (request, response, next) => {
     try {
         const id = request.params.id;
         const modifiedStudent = new Student({ ...request.body});
@@ -87,7 +87,7 @@ studentsRouter.put('/:id', [isAuth] ,async (request, response, next) => {
         next(error)
     }
 });
-studentsRouter.delete('/:id', [isAuth] ,async (request, response, next) => {
+studentsRouter.delete('/:id',async (request, response, next) => {
     try {
         const id = request.params.id;
         const deletedStudent = await Student.findByIdAndDelete(id);
