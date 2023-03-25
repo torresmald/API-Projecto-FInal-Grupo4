@@ -51,7 +51,7 @@ studentsRouter.get('/:id', async (request, response, next) => {
         next(error)
     }
 });
-studentsRouter.post('/', [upload.single('picture'), uploadToCloud, isAuth], async (request, response, next) => {
+studentsRouter.post('/', [upload.single('picture'), uploadToCloud], async (request, response, next) => {
     try {
         const allStudents = await Student.find();
         let maxId = 0;
