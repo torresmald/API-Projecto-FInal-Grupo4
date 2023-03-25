@@ -13,6 +13,7 @@ const resourcesSchema = new mongoose.Schema({
         'english activities',
         'thematic programming',
         ]},
+    buy: String
     },
     {
         timestamps: true
