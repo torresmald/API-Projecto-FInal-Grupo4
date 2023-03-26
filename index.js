@@ -20,7 +20,7 @@ const cors = require('cors');
 const http = require('http').Server(server);
 const io = require('socket.io')(http, {
   cors: {
-    origins: ["*"],
+    origin: "*",
     handlePreflightRequest: (req, res) => {
       res.writeHead(200, {
         "Access-Control-Allow-Origin": "*",
