@@ -21,7 +21,7 @@ const http = require('http').Server(server);
 const io = require('socket.io')(http, {
   cors: {
     origin: "https://projecto-final-grupo4.vercel.app",
-    methods: ["GET", "POST"],
+    allowedHeaders: ["my-custom-header"],
     credentials: true
   }
 });
