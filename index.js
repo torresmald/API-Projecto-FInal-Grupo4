@@ -19,9 +19,8 @@ const createError = require('./utils/errors/createError.js');
 const cors = require('cors');
 const http = require('http').Server(server);
 const io = require('socket.io')(http, {
-  
   cors: {
-    origin: 'http://localhost:4200/',
+    origin: true,
     credentials: true,
     methods: ['GET', 'POST']
   }
