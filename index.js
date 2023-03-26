@@ -20,9 +20,7 @@ const cors = require('cors');
 const http = require('http').Server(server);
 const io = require('socket.io')(http, {
   cors: {
-    origin: true,
-    credentials: true,
-    methods: ['GET', 'POST']
+    origin: "http://localhost:4200"
   }
 });
 
