@@ -17,6 +17,14 @@ const path = require('path');
 const cloudinary = require('cloudinary');
 const createError = require('./utils/errors/createError.js');
 const cors = require('cors');
+const http = require('http').Server(server);
+const io = require('socket.io')(http, {
+  cors: {
+    origin: 'http://localhost:4200/',
+    credentials: true,
+    methods: ['GET', 'POST']
+  }
+});
 
 
 connect();
@@ -43,6 +51,16 @@ server.use(session({
   })
 }));
 
+
+io.on('connection', (socket) => {
+  console.log('Nuevo usuario Conectado');
+
+  socket.on('sendMessage', (messageInfo) => {
+    console.log('Enviando un mensaje');
+    socket.broadcast.emit('receiveMessage', messageInfo);
+  })
+})
+
 server.use(passport.initialize());
 server.use(passport.session());
 server.use(express.json());
@@ -66,7 +84,7 @@ server.use((error, request, response, next) => {
   return response.status(error.status || 500).json(error.message || 'Unexpected Error')
 });
 
-server.listen(PORT, () => {
+http.listen(PORT, () => {
   console.log(`Listening in http://localhost:${PORT}`);
 });
 
