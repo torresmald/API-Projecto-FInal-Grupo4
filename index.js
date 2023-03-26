@@ -20,12 +20,18 @@ const cors = require('cors');
 const http = require('http').Server(server);
 const io = require('socket.io')(http, {
   cors: {
-    origin: 'http://localhost:4200/',
-    credentials: true,
-    methods: ['GET', 'POST']
+    origin: "*",
+    handlePreflightRequest: (req, res) => {
+      res.writeHead(200, {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET,POST",
+        "Access-Control-Allow-Headers": "my-custom-header",
+        "Access-Control-Allow-Credentials": true
+      });
+      res.end();
+    }
   }
 });
-
 
 connect();
 
