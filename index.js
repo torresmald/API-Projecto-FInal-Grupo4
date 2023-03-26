@@ -19,11 +19,11 @@ const createError = require('./utils/errors/createError.js');
 const cors = require('cors');
 const http = require('http').Server(server);
 const io = require('socket.io')(http, {
-  cors: {
-    origin: "https://projecto-final-grupo4.vercel.app",
-    methods: ["GET", "POST"],
-    credentials: true
-  }
+  // cors: {
+  //   origin: "https://projecto-final-grupo4.vercel.app",
+  //   methods: ["GET", "POST"],
+  //   credentials: true
+  // }
 });
 
 connect();
@@ -33,20 +33,23 @@ cloudinary.config({
   api_key: process.env.API_KEY,
   api_secret: process.env.API_SECRET
 });
-const whiteList = ['http://localhost:3000', 'http://localhost:4200', 'https://projecto-final-grupo4.vercel.app', 'https://api-projecto-final-grupo4.vercel.app'];
-const corsOptions = {
-  credentials: true,
-  origin: function (origin, callback) {
-    if (whiteList.indexOf(origin) !== -1 || !origin) {
-      callback(null, true)
-    } else {
-      callback(new Error('Not allowed by Cors'))
-    }
-  }
-}
+// const whiteList = ['http://localhost:3000', 'http://localhost:4200', 'https://projecto-final-grupo4.vercel.app', 'https://api-projecto-final-grupo4.vercel.app'];
+// const corsOptions = {
+//   credentials: true,
+//   origin: function (origin, callback) {
+//     if (whiteList.indexOf(origin) !== -1 || !origin) {
+//       callback(null, true)
+//     } else {
+//       callback(new Error('Not allowed by Cors'))
+//     }
+//   }
+// }
 
 
-server.use(cors(corsOptions));
+server.use(cors({
+  origin: 'https://projecto-final-grupo4.vercel.app',
+  credentials: true
+}));
 require('./utils/authentication/passport.js');
 server.use(session({
   secret: process.env.SESSION_SECRET_KEY,
