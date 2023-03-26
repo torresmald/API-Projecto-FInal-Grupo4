@@ -9,6 +9,7 @@ const studentsSchema = new mongoose.Schema({
     email: String,
     date: String,
     areas: { type: [String] },
+    tutor: [{ type: mongoose.Types.ObjectId, ref: 'Parent' }],
     diseases: { type: [String] },
     nutrition: { type: [String] },
     grade: String,
