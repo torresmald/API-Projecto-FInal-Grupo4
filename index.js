@@ -22,8 +22,9 @@ const io = require('socket.io')(http, {
   cors: {
     origin: "https://projecto-final-grupo4.vercel.app",
     methods: ["GET", "POST"],
-    withCredentials: true,
-    allowedHeaders: ["my-custom-header"]  }
+    allowedHeaders: ["my-custom-header"],
+    credentials: true
+  }
 });
 
 connect();
