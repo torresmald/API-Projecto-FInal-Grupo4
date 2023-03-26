@@ -21,7 +21,7 @@ const http = require('http').Server(server);
 const io = require('socket.io')(http, {
   cors: {
     origin: "http://localhost:4200",
-    methods: ["GET", "POST"],
+    methods: ['GET','POST'],
     allowedHeaders: ["my-custom-header"],
     credentials: true
   }
