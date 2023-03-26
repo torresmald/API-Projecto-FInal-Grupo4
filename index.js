@@ -47,7 +47,7 @@ cloudinary.config({
 
 
 server.use(cors({
-  origin: 'https://projecto-final-grupo4.vercel.app',
+  origin: 'http://localhost:4200',
   credentials: true
 }));
 require('./utils/authentication/passport.js');
