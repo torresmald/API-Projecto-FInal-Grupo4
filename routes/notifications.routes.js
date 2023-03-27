@@ -2,9 +2,9 @@ const express = require('express');
 const notificationRouter = express.Router();
 const Notification = require('../model/Notifications');
 const createError = require('../utils/errors/createError.js');
-const uploadToCloud = require('../utils/middlewares/cloudinary.js');
 const upload = require('../utils/middlewares/files.middleware.js');
 const isAuth = require ('../utils/middlewares/auth.middleware.js')
+const uploadToCloud = require('../utils/middlewares/cloudinary');
 
 notificationRouter.get('/', async (request, response, next) => {
     try {
@@ -27,7 +27,7 @@ notificationRouter.get('/:id', async (request, response, next) => {
 notificationRouter.post('/', [upload.fields([
     { name: 'image', maxCount: 1 },
     { name: 'calendar', maxCount: 1 }
-  , uploadToCloud]),  uploadToCloud], async (request, response, next) => {
+  ]),  uploadToCloud], async (request, response, next) => {
     try {
         const allNotifications = await Notification.find();
         let maxId = 0;

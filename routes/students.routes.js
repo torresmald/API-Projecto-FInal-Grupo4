@@ -5,7 +5,7 @@ const createError = require('../utils/errors/createError.js');
 const uploadToCloud = require('../utils/middlewares/cloudinary.js');
 const upload = require('../utils/middlewares/files.middleware.js');
 const isAuth = require ('../utils/middlewares/auth.middleware.js');
-const uploadToCloud2 = require('../utils/middlewares/cloudinary.js');
+const uploadToCloud2 = require('../utils/middlewares/cloudinary-students');
 
 studentsRouter.get('/', async (request, response, next) => {
     try {
@@ -52,7 +52,7 @@ studentsRouter.get('/:id', async (request, response, next) => {
         next(error)
     }
 });
-studentsRouter.post('/', [upload.single('image'), uploadToCloud], async (request, response, next) => {
+studentsRouter.post('/', [upload.single('image'), uploadToCloud2 ], async (request, response, next) => {
     try {
         const allStudents = await Student.find();
         let maxId = 0;
