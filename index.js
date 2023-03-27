@@ -22,24 +22,23 @@ const io = require('socket.io')(http, {
   cors: {
     origin: "https://projecto-final-grupo4.vercel.app/",
     methods: ['GET','POST'],
-    allowedHeaders: ["my-custom-header"],
     credentials: true
   }
 });
 
-const whitelist = ['http://localhost:3000/', 'http://localhost:4200/', 'https://projecto-final-grupo4.vercel.app/' /** other domains if any */ ]
-const corsOptions = {
-  credentials: true,
-  origin: function(origin, callback) {
-    console.log(origin);
-    if (whitelist.indexOf(origin) !== -1) {
-      callback(null, true)
-    } else {
-      callback(new Error('Not allowed by CORS'))
-    }
-  }
-};
-server.use(cors(corsOptions));
+// const whitelist = ['http://localhost:3000/', 'http://localhost:4200/', 'https://projecto-final-grupo4.vercel.app/' /** other domains if any */ ]
+// const corsOptions = {
+//   credentials: true,
+//   origin: function(origin, callback) {
+//     console.log(origin);
+//     if (whitelist.indexOf(origin) !== -1) {
+//       callback(null, true)
+//     } else {
+//       callback(new Error('Not allowed by CORS'))
+//     }
+//   }
+// };
+server.use(cors());
 
 connect();
 
@@ -49,8 +48,6 @@ cloudinary.config({
   api_secret: process.env.API_SECRET
 });
 
-
-server.use(cors());
 require('./utils/authentication/passport.js');
 server.use(session({
   secret: process.env.SESSION_SECRET_KEY,
