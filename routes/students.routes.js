@@ -4,7 +4,8 @@ const Student = require('../model/Students');
 const createError = require('../utils/errors/createError.js');
 const uploadToCloud = require('../utils/middlewares/cloudinary.js');
 const upload = require('../utils/middlewares/files.middleware.js');
-const isAuth = require ('../utils/middlewares/auth.middleware.js')
+const isAuth = require ('../utils/middlewares/auth.middleware.js');
+const uploadToCloud2 = require('../utils/middlewares/cloudinary.js');
 
 studentsRouter.get('/', async (request, response, next) => {
     try {
@@ -61,7 +62,8 @@ studentsRouter.post('/', [upload.single('image'), uploadToCloud], async (request
                 maxId = id + 1;
             }
         });
-        const newStudent = new Student({ ...request.body, id: maxId, image: request.file_urls ? request.file_urls[0] : null,});
+        const image = request.file ? request.file.filename : null;
+        const newStudent = new Student({ ...request.body, id: maxId, image: request.file_url});
         const newStudentDoc = await newStudent.save();
         return response.status(201).json(newStudentDoc);
     } catch (error) {
