@@ -51,7 +51,7 @@ studentsRouter.get('/:id', async (request, response, next) => {
         next(error)
     }
 });
-studentsRouter.post('/', [upload.single('picture'), uploadToCloud], async (request, response, next) => {
+studentsRouter.post('/', [upload.single('image'), uploadToCloud], async (request, response, next) => {
     try {
         const allStudents = await Student.find();
         let maxId = 0;
@@ -61,7 +61,7 @@ studentsRouter.post('/', [upload.single('picture'), uploadToCloud], async (reque
                 maxId = id + 1;
             }
         });
-        const newStudent = new Student({ ...request.body, id: maxId });
+        const newStudent = new Student({ ...request.body, id: maxId, image: request.file_urls ? request.file_urls[0] : null,});
         const newStudentDoc = await newStudent.save();
         return response.status(201).json(newStudentDoc);
     } catch (error) {
