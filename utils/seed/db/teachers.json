@@ -4,6 +4,7 @@
     "password": "12345678",
     "name": "Pedro Jimenez",
     "phone": "65213675",
+    "admin": true,
     "idCard": "7025653W",
     "grade": "1ªA"
   },
@@ -14,7 +15,7 @@
     "name": "Isabel Ramirez",
     "phone": "65213675",
     "idCard": "7025654W",
-    "grade": "1ªA"
+    "grade": "2ªA"
   },
 
   {
@@ -23,6 +24,6 @@
     "name": "Maria Gonzalez",
     "phone": "65213675",
     "idCard": "7025655W",
-    "grade": "2ªA"
+    "grade": "3ªA"
   }
 ]

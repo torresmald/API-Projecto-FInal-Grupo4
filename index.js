@@ -19,10 +19,9 @@ const createError = require('./utils/errors/createError.js');
 const cors = require('cors');
 const http = require('http').Server(server);
 const io = require('socket.io')(http, {
-  cors: {
-    origin: "https://projecto-final-grupo4.vercel.app/",
-    methods: ['GET','POST'],
-    credentials: true
+  allowRequest: (req, callback) => {
+    const noOriginHeader = req.headers.origin === undefined;
+    callback(null, noOriginHeader); // only allow requests without 'origin' header
   }
 });
 
