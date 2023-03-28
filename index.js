@@ -19,9 +19,10 @@ const createError = require('./utils/errors/createError.js');
 const cors = require('cors');
 const http = require('http').Server(server);
 const io = require('socket.io')(http, {
-  allowRequest: (req, callback) => {
-    const noOriginHeader = req.headers.origin === undefined;
-    callback(null, noOriginHeader); // only allow requests without 'origin' header
+  cors: {
+    origin: "http://localhost:4200",
+    allowedHeaders: ["my-custom-header"],
+    credentials: true
   }
 });
 
