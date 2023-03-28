@@ -17,14 +17,14 @@ const path = require('path');
 const cloudinary = require('cloudinary');
 const createError = require('./utils/errors/createError.js');
 const cors = require('cors');
-const http = require('http').Server(server);
-const io = require('socket.io')(http, {
-  cors: {
-    origin: "https://projecto-final-grupo4.vercel.app/",
-    methods: ['GET','POST'],
-    credentials: true
-  }
-});
+// const http = require('http').Server(server);
+// const io = require('socket.io')(http, {
+//   cors: {
+//     origin: "http://localhost:4200",
+//     methods: ['GET','POST'],
+//     credentials: true
+//   }
+// });
 
 // const whitelist = ['http://localhost:3000/', 'http://localhost:4200/', 'https://projecto-final-grupo4.vercel.app/' /** other domains if any */ ]
 // const corsOptions = {
@@ -63,14 +63,12 @@ server.use(session({
 }));
 
 
-io.on('connection', (socket) => {
-  console.log('Nuevo usuario Conectado');
-
-  socket.on('sendMessage', (messageInfo) => {
-    console.log('Enviando un mensaje');
-    socket.broadcast.emit('receiveMessage', messageInfo);
-  })
-})
+// io.on('connection', (socket) => {
+//   console.log('Nuevo usuario Conectado');
+//   socket.on('sendMessage', (messageInfo) => {
+//     socket.broadcast.emit('receiveMessage', messageInfo);
+//   })
+// })
 
 server.use(passport.initialize());
 server.use(passport.session());
