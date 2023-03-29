@@ -20,7 +20,7 @@ const cors = require('cors');
 const http = require('http').Server(server);
 const io = require('socket.io')(http, {
   cors: {
-    origin: ["https://semilla-school.web.app/"],
+    origin: ["https://semilla-school.web.app"],
 }
 });
 
