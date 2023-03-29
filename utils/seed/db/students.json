@@ -18,7 +18,6 @@
     "email": "test@test.com",
     "date": "17/02/2022",
     "areas": ["Gym", "Maths", "Language"],
-    "tutor": "6411ac5df77f3d475fc89a99",
     "diseases": "Asma",
     "nutrition": ["Platano", "Fresa"],
     "grade": "1ºA"
@@ -32,7 +31,6 @@
     "email": "juan@test.com",
     "date": "11/09/2022",
     "areas": ["Gym", "Maths", "Language"],
-    "tutor": "6411aae2ba2188502d004b29",
     "diseases": "Ninguna",
     "nutrition": ["Melon", "Sandia"],
     "grade": "1ºA"
@@ -46,7 +44,6 @@
     "email": "alam@test.com",
     "date": "19/10/2022",
     "areas": ["Gym", "Maths", "Language"],
-    "tutor": "6411aae2ba2188502d004b29",
     "diseases": "Alergia a los Cacahuete",
     "nutrition": ["Kiwi", "Melocoton"],
     "grade": "1ºA"
@@ -60,7 +57,6 @@
     "email": "elva@test.com",
     "date": "27/06/2021",
     "areas": ["Gym", "Maths", "Language"],
-    "tutor": "6411aae2ba2188502d004b29",
     "diseases": "Ninguna",
     "nutrition": ["Manzana", "Fresa"],
     "grade": "1ºA"
@@ -74,7 +70,6 @@
     "email": "hugo@test.com",
     "date": "21/09/2022",
     "areas": ["Gym", "Maths", "Language"],
-    "tutor": "6411aae2ba2188502d004b29",
     "diseases": "Ninguna",
     "nutrition": ["Piña", "Fresa"],
     "grade": "1ºA"
@@ -88,7 +83,6 @@
     "email": "alex@test.com",
     "date": "17/02/2022",
     "areas": ["Gym", "Maths", "Language"],
-    "tutor": "6411aae2ba2188502d004b29",
     "diseases": "Alergia al chocolate",
     "nutrition": ["Platano", "Fresa"],
     "grade": "1ºA"
@@ -102,7 +96,6 @@
     "email": "mariat@test.com",
     "date": "12/08/2023",
     "areas": ["Gym", "Maths", "Language"],
-    "tutor": "6411aae2ba2188502d004b29",
     "diseases": "Intolarante a la lactosa",
     "nutrition": ["Uvas", "Kiwi"],
     "grade": "1ºA"
@@ -116,7 +109,6 @@
     "email": "paula@test.com",
     "date": "17/09/2024",
     "areas": ["Gym", "Maths", "Language"],
-    "tutor": "6411aae2ba2188502d004b29",
     "diseases": "Alergia a los citricos",
     "nutrition": ["Manzana", "Fresa"],
     "grade": "1ºA"
@@ -130,7 +122,6 @@
     "email": "elsa@test.com",
     "date": "21/10/2022",
     "areas": ["Gym", "Maths", "Language"],
-    "tutor": "6411aae2ba2188502d004b29",
     "diseases": "Ninguna",
     "nutrition": ["Pera", "Fresa"],
     "grade": "1ºA"
@@ -144,7 +135,6 @@
     "email": "Alvaro@test.com",
     "date": "17/06/2024",
     "areas": ["Gym", "Maths", "Language"],
-    "tutor": "6411aae2ba2188502d004b29",
     "diseases": "Ninguna",
     "nutrition": ["Yogurt", "Melocoton"],
     "grade": "1ºA"
@@ -158,7 +148,6 @@
     "email": "debora@test.com",
     "date": "17/09/2023",
     "areas": ["Gym", "Maths", "Language"],
-    "tutor": "6411aae2ba2188502d004b29",
     "diseases": "Asma",
     "nutrition": ["Limon", "Naranja"],
     "grade": "1ºA"
@@ -172,7 +161,6 @@
     "email": "escobar@test.com",
     "date": "27/12/2022",
     "areas": ["Gym", "Maths", "Language"],
-    "tutor": "6411aae2ba2188502d004b29",
     "diseases": "Ninguna",
     "nutrition": ["Tamarindo", "Uvas"],
     "grade": "1ºA"
@@ -186,7 +174,6 @@
     "email": "nicolas@test.com",
     "date": "17/02/2022",
     "areas": ["Gym", "Maths", "Language"],
-    "tutor": "6411aae2ba2188502d004b29",
     "diseases": "Asma",
     "nutrition": ["Manzana", "Arroz"],
     "grade": "1ºA"
@@ -200,7 +187,6 @@
     "email": "juan@test.com",
     "date": "17/02/2022",
     "areas": ["Gym", "Maths", "Language"],
-    "tutor": "6411aae2ba2188502d004b29",
     "diseases": "Ninguna",
     "nutrition": ["Platano", "Fresa"],
     "grade": "1ºA"
@@ -214,7 +200,6 @@
     "email": "pedro@test.com",
     "date": "11/09/2025",
     "areas": ["Gym", "Maths", "Language"],
-    "tutor": "6411aae2ba2188502d004b29",
     "diseases": "Asma",
     "nutrition": ["Uvas", "Mani"],
     "grade": "1ºA"
@@ -228,7 +213,6 @@
     "email": "carlos@test.com",
     "date": "22/12/2021",
     "areas": ["Gym", "Maths", "Language"],
-    "tutor": "6411aae2ba2188502d004b29",
     "diseases": "Alergia al polen",
     "nutrition": ["Pasta", "Queso"],
     "grade": "1ºA"
@@ -242,7 +226,6 @@
     "email": "isabel@test.com",
     "date": "17/01/2022",
     "areas": ["Gym", "Maths", "Language"],
-    "tutor": "6411aae2ba2188502d004b29",
     "diseases": "Ninguna",
     "nutrition": ["Sushi", "Mani"],
     "grade": "1ºA"
@@ -256,7 +239,6 @@
     "email": "beatriz@test.com",
     "date": "11/09/2022",
     "areas": ["Gym", "Maths", "Language"],
-    "tutor": "6411aae2ba2188502d004b29",
     "diseases": "Ninguna",
     "nutrition": ["Platano", "Fresa"],
     "grade": "1ºA"
@@ -270,7 +252,6 @@
     "email": "alma@test.com",
     "date": "17/02/2022",
     "areas": ["Gym", "Maths", "Language"],
-    "tutor": "6411aae2ba2188502d004b29",
     "diseases": "Asma",
     "nutrition": ["Naranja", "Piña"],
     "grade": "1ºA"
@@ -284,7 +265,6 @@
     "email": "oscar@test.com",
     "date": "19/12/2021",
     "areas": ["Gym", "Maths", "Language"],
-    "tutor": "6411aae2ba2188502d004b29",
     "diseases": "Ninguna",
     "nutrition": ["Platano", "Fresa"],
     "grade": "2ºA"
@@ -298,7 +278,6 @@
     "email": "ana@test.com",
     "date": "27/11/2023",
     "areas": ["Gym", "Maths", "Language"],
-    "tutor": "6411aae2ba2188502d004b29",
     "diseases": "Alergia al chocolate",
     "nutrition": ["Kiwi", "Fresa"],
     "grade": "2ºA"
@@ -312,7 +291,6 @@
     "email": "sara@test.com",
     "date": "22/10/2022",
     "areas": ["Gym", "Maths", "Language"],
-    "tutor": "6411aae2ba2188502d004b29",
     "diseases": "Asma",
     "nutrition": ["Limon", "Bocata"],
     "grade": "2ºA"
@@ -326,7 +304,6 @@
     "email": "susana@test.com",
     "date": "22/12/2022",
     "areas": ["Gym", "Maths", "Language"],
-    "tutor": "6411aae2ba2188502d004b29",
     "diseases": "Ninguna",
     "nutrition": ["Uvas", "Queso"],
     "grade": "2ºA"
@@ -340,7 +317,6 @@
     "email": "test@test.com",
     "date": "17/02/2021",
     "areas": ["Gym", "Maths", "Language"],
-    "tutor": "6411aae2ba2188502d004b29",
     "diseases": "Intolarante a la lactosa",
     "nutrition": ["Maiz", "Fresa"],
     "grade": "2ºA"
@@ -354,7 +330,6 @@
     "email": "juan@test.com",
     "date": "27/01/2023",
     "areas": ["Gym", "Maths", "Language"],
-    "tutor": "6411aae2ba2188502d004b29",
     "diseases": "Alergia al polen",
     "nutrition": ["Platano", "Fresa"],
     "grade": "2ºA"
@@ -368,7 +343,6 @@
     "email": "test@test.com",
     "date": "17/12/2022",
     "areas": ["Gym", "Maths", "Language"],
-    "tutor": "6411aae2ba2188502d004b29",
     "diseases": "Alergia a los citricos",
     "nutrition": ["Platano", "Kiwi"],
     "grade": "2ºA"
@@ -382,7 +356,6 @@
     "email": "sergio@test.com",
     "date": "11/02/2024",
     "areas": ["Gym", "Maths", "Language"],
-    "tutor": "6411aae2ba2188502d004b29",
     "diseases": "Alergia al chocolate",
     "nutrition": ["Piña", "Fresa"],
     "grade": "2ºA"
@@ -396,7 +369,6 @@
     "email": "ivan@test.com",
     "date": "21/08/2022",
     "areas": ["Gym", "Maths", "Language"],
-    "tutor": "6411aae2ba2188502d004b29",
     "diseases": "Ninguna",
     "nutrition": ["Platano", "Fresa"],
     "grade": "2ºA"
@@ -410,7 +382,6 @@
     "email": "pepe@test.com",
     "date": "27/12/2022",
     "areas": ["Gym", "Maths", "Language"],
-    "tutor": "6411aae2ba2188502d004b29",
     "diseases": "Ninguna",
     "nutrition": ["Maiz", "Manzana"],
     "grade": "2ºA"
@@ -424,7 +395,6 @@
     "email": "ramon@test.com",
     "date": "11/02/2021",
     "areas": ["Gym", "Maths", "Language"],
-    "tutor": "6411aae2ba2188502d004b29",
     "diseases": "Ninguna",
     "nutrition": ["Uvas", "Manzana"],
     "grade": "1ºA"
