@@ -21,10 +21,13 @@ const http = require('http').Server(server);
 const io = require('socket.io')(http, {
   cors: {
     origin: ["https://semilla-school.web.app"],
+    
 }
 });
 
-server.use(cors());
+server.use(cors({
+  origin: 'https://semilla-school.web.app'
+}));
 
 connect();
 
