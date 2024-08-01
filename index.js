@@ -25,9 +25,7 @@ const io = require('socket.io')(http, {
 }
 });
 
-server.use(cors({
-  origin: 'https://semilla-school.web.app'
-}));
+server.use(cors());
 
 connect();
 
